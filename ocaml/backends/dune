@@ -9,4 +9,4 @@
        resources/verilator.hpp resources/verilator.cpp
        resources/Makefile)
  (targets resources.ml)
- (action (run ocaml str.cma gen.ml)))
+ (action (run ocaml -I +str str.cma gen.ml)))

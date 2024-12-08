@@ -104,7 +104,7 @@ Proof.
   replace (sz0 - offset - width) with (sz0 - (offset + width)) by lia.
   rewrite <- !skipn_firstn.
   rewrite (firstn_all2 (n := sz0 + sz)) by (rewrite vect_to_list_length; lia).
-  rewrite <- skipn_app by (rewrite firstn_length, vect_to_list_length; min_t; lia).
+  rewrite <- skipn_app by (rewrite length_firstn, vect_to_list_length; min_t; lia).
   rewrite List.firstn_skipn.
   reflexivity.
 Qed.

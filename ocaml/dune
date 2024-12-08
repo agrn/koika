@@ -2,7 +2,7 @@
  (name registry)
  (public_name koika.registry)
  (modules registry)
- (libraries cuttlebone))
+ (libraries cuttlebone str unix))
 
 (executable
  (name cuttlec)
@@ -16,10 +16,10 @@
  (name interop)
  (public_name koika.interop)
  (modules interop)
- (libraries backends))
+ (libraries backends str unix))
 
 (library
  (name koika)
  (public_name koika)
  (modules koika)
- (libraries frontends backends cuttlebone interop registry))
+ (libraries frontends backends cuttlebone interop registry str unix))

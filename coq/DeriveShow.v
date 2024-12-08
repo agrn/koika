@@ -22,7 +22,8 @@ Module Internals.
         Std.rCofix := true;
         Std.rZeta := true;
         Std.rDelta := true;
-        Std.rConst := []
+        Std.rConst := [];
+        Std.rStrength := Std.Norm;
       } None c.
 
   Ltac2 rec list_map fn l :=

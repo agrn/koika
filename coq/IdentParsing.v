@@ -127,7 +127,7 @@ Module TestBits.
     let (b4, bs) := list_pop coq_bool_of_bool bs in
     let (b5, bs) := list_pop coq_bool_of_bool bs in
     let (b6, bs) := list_pop coq_bool_of_bool bs in
-    let (b7, bs) := list_pop coq_bool_of_bool bs in
+    let (b7, _) := list_pop coq_bool_of_bool bs in
     fn b7 b6 b5 b4 b3 b2 b1 b0.
 End TestBits.
 
