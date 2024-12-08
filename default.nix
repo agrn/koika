@@ -1,13 +1,13 @@
 {
   lib,
-  mkCoqDerivation,
   coq,
+  coqPackages,
   boost,
   python3,
   sphinx,
   doCheck ? false,
 }:
-mkCoqDerivation rec {
+coqPackages.mkCoqDerivation rec {
   pname = "koika";
   defaultVersion = "0.0.1";
 
