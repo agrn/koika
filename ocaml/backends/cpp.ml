@@ -1357,7 +1357,7 @@ them before writing to the registers.\n"
         let ret_tau = Cuttlebone.Util.typ_of_extr_type intf.Extr.uint_retType in
         let ret_type = cpp_type_of_type ret_tau in
         let ret_arg = sprintf "%s %s" ret_type "&_ret" in
-        let args = String.concat ", " @@ name :: ret_arg :: List.map sp_arg intf.Extr.uint_argspec in
+        let args = String.concat ", " @@ name :: ret_arg :: List.map sp_arg (List.rev intf.Extr.uint_argspec) in
         p "DECL_FN(%s, %s)" name ret_type;
         p_special_fn "FN" ~args (fun () ->
             let target = VarTarget { tau = ret_tau; declared = true; name = "_ret" } in
